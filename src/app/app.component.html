@@ -1,0 +1,17 @@
+<div class="f1-wrapper">
+  <div id="wrapper">
+    <app-navbar></app-navbar>
+    <div class="page-content d-flex align-items-stretch">
+      <app-sidebar></app-sidebar>
+      <div [class.loginwidth]="navbarService.topelement" class="content-inner">
+        <router-outlet></router-outlet>
+        <footer class="main-footer-top">
+           <app-footer></app-footer>
+        </footer>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

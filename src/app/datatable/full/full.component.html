@@ -1,0 +1,33 @@
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Fullscreen</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Fullscreen</li>
+  </div>
+</ul>
+
+<section class="f1-fullscreen">
+  <div class="container-fluid">
+     <ngx-datatable
+        class="material fullscreen"
+        [columnMode]="'force'"
+        [headerHeight]="40"
+        [footerHeight]="0"
+        [rowHeight]="40"
+        [scrollbarV]="true"
+        [scrollbarH]="true"
+        [rows]="rows">
+        <ngx-datatable-column name="Id" [width]="80"></ngx-datatable-column>
+        <ngx-datatable-column name="Name" [width]="300"></ngx-datatable-column>
+        <ngx-datatable-column name="Gender"></ngx-datatable-column>
+        <ngx-datatable-column name="Age"></ngx-datatable-column>
+        <ngx-datatable-column name="City" [width]="300" prop="address.city"></ngx-datatable-column>
+        <ngx-datatable-column name="State" [width]="300" prop="address.state"></ngx-datatable-column>
+      </ngx-datatable>
+  </div>
+</section>

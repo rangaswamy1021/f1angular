@@ -1,0 +1,71 @@
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Collapse</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Collapse</li>
+  </div>
+</ul>
+
+<section class="f1-carosel">
+  <div class="container-fluid">
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">Pie chart</div>
+      <div class="card-blockcharts">
+        <div>
+         <ngx-charts-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="showLabels"
+      [doughnut]="doughnut"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">Advanced pie chart</div>
+      <div class="card-blockcharts">
+        <div>
+           <ngx-charts-advanced-pie-chart
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-advanced-pie-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">Pie grid</div>
+      <div class="card-blockcharts">
+        <div>
+      <ngx-charts-pie-grid
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>

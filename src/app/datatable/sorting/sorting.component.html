@@ -1,0 +1,29 @@
+ <header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Sorting</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Sorting</li>
+  </div>
+</ul>
+
+<section class="f1-fullscreen">
+  <div class="container-fluid">
+
+     <ngx-datatable
+        class="material"
+        [rows]="rows"
+        [columns]="columns"
+        [sortType]="'multi'"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="50"
+        [scrollbarV]="true">
+      </ngx-datatable>
+  </div>
+</section>

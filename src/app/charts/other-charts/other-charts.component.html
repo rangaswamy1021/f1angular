@@ -1,0 +1,98 @@
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Other Charts</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Other Charts</li>
+  </div>
+</ul>
+
+<section class="f1-carosel">
+  <div class="container-fluid">
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Line chart</div>
+      <div class="card-blockcharts">
+        <div>
+    <ngx-charts-heat-map
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [legend]="showLegend"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-heat-map>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Area chart</div>
+      <div class="card-blockcharts">
+        <div>
+    <ngx-charts-tree-map
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      (select)="onSelect($event)">
+    </ngx-charts-tree-map>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Number Card Chart</div>
+      <div class="card-blockcharts">
+        <div>
+    <ngx-charts-number-card
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      (select)="onSelect($event)">
+    </ngx-charts-number-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-6">
+    <div class="card">
+      <div class="card-header">Normalized area chart</div>
+      <div class="card-blockcharts">
+        <div>
+    <ngx-charts-gauge
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="data"
+      [min]="0"
+      [max]="100"
+      [angleSpan]="240"
+      [startAngle]="-120"
+      [units]="'alerts'"
+      [bigSegments]="10"
+      [smallSegments]="5"
+      (select)="onSelect($event)">
+    </ngx-charts-gauge>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>

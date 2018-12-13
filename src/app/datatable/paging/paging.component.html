@@ -1,0 +1,28 @@
+ <header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Paging</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Paging</li>
+  </div>
+</ul>
+
+<section class="f1-paging">
+  <div class="container-fluid">
+
+<ngx-datatable
+        class="material"
+        [rows]="rows"
+        [columns]="[{name:'Name'},{name:'Gender'},{name:'Company'}]"
+        [columnMode]="'force'"
+        [headerHeight]="50"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [limit]="10">
+      </ngx-datatable>
+  </div>
+</section>

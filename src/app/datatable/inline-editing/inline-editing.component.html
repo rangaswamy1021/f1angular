@@ -1,0 +1,66 @@
+ <header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Inline Editing</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Inline Editing</li>
+  </div>
+</ul>
+
+<section class="f1-fullscreen">
+  <div class="container-fluid">
+<ngx-datatable
+        #mydatatable
+        class="material"
+        [headerHeight]="50"
+        [limit]="5"
+        [columnMode]="'force'"
+        [footerHeight]="50"
+        [rowHeight]="'auto'"
+        [rows]="rows">
+        <ngx-datatable-column name="Name">
+          <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+            <span
+              title="Double click to edit"
+              (dblclick)="editing[row.$$index + '-name'] = true"
+              *ngIf="!editing[row.$$index + '-name']">
+              {{value}}
+            </span>
+            <input
+              autofocus
+              (blur)="updateValue($event, 'name', value, row)"
+              *ngIf="editing[row.$$index + '-name']"
+              type="text"
+              [value]="value"
+            />
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Gender">
+          <ng-template ngx-datatable-cell-template let-row="row" let-value="value">
+             <span
+              title="Double click to edit"
+              (dblclick)="editing[row.$$index + '-gender'] = true"
+              *ngIf="!editing[row.$$index + '-gender']">
+              {{value}}
+            </span>
+            <select
+              *ngIf="editing[row.$$index + '-gender']"
+              (change)="updateValue($event, 'gender', value, row)"
+              [value]="value">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Age">
+          <ng-template ngx-datatable-cell-template let-value="value">
+            {{value}}
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+        </div>
+</section>

@@ -1,0 +1,78 @@
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Collapse</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Collapse</li>
+  </div>
+</ul>
+
+<section class="f1-googlemaps">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header no-shadow">Basic Map</div>
+              <div class="card-block p-0">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom"></agm-map>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header no-shadow">Styled Map</div>
+              <div class="card-block p-0">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [styles]="styles"></agm-map>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header no-shadow">Polylines</div>
+              <div class="card-block p-0">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+                  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                  <agm-marker [latitude]="latA" [longitude]="lngA"></agm-marker>
+                  <agm-polyline>
+                    <agm-polyline-point [latitude]="lat" [longitude]="lng">
+                    </agm-polyline-point>
+                    <agm-polyline-point [latitude]="latA" [longitude]="lngA">
+                    </agm-polyline-point>
+                  </agm-polyline>
+                </agm-map>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header no-shadow">Info Window</div>
+              <div class="card-block p-0">
+                <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+                  <agm-marker [latitude]="lat" [longitude]="lng">
+                    <agm-info-window>InfoWindow content</agm-info-window>
+                  </agm-marker>
+                </agm-map>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<h1>{{ title }}</h1>
+

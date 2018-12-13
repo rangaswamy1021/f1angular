@@ -1,0 +1,81 @@
+<nav class="side-navbar" *ngIf="!sidebarService.sidebarvisible" malihu-scrollbar [scrollbarOptions]="scrollbarOptions">
+  <!-- Sidebar Header-->
+  <div class="sidebar-header d-flex align-items-center">
+    <div class="avatar"><img src="assets/img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+    <div class="title">
+      <h1 class="h4">Mark Stephen</h1>
+      <p>Web Designer</p>
+    </div>
+  </div>
+  <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+  <ul class="list-unstyled">
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"> <a routerLink=""><i class="material-icons">home</i>Home</a></li>
+    <li><a href="#ui-components" aria-expanded="false" data-toggle="collapse"><i class="material-icons">assessment</i>UI Components </a>
+      <ul id="ui-components" class="collapse list-unstyled">
+        <li><a routerLink="ui-components/accordion" routerLinkActive="active">Accordion</a></li>
+        <li><a routerLink="ui-components/alert" routerLinkActive="active">Alert</a></li>
+        <li><a routerLink="ui-components/carousel" routerLinkActive="active">Carousel</a></li>
+        <li><a routerLink="ui-components/collapse" routerLinkActive="active">Collapse</a></li>
+        <li><a routerLink="ui-components/tables" routerLinkActive="active">Tables</a></li>
+        <li><a routerLink="ui-components/dropdown" routerLinkActive="active">Dropdown</a></li>
+        <li><a routerLink="ui-components/modal" routerLinkActive="active">Modal</a></li>
+        <li><a routerLink="ui-components/rating" routerLinkActive="active">Rating</a></li>
+        <li><a routerLink="ui-components/tabs" routerLinkActive="active">Tabs</a></li>
+      </ul>
+    </li>
+    
+
+    <li routerLinkActive="active"><a href="#navforms" aria-expanded="false" data-toggle="collapse"><i class="material-icons">comment</i>Forms </a>
+      <ul id="navforms" class="collapse list-unstyled">
+        <li><a routerLink="forms/basic-inputs" routerLinkActive="active">Basic Inputs</a></li>
+        <li><a routerLink="forms/input-masks" routerLinkActive="active">Input Masks</a></li>
+        <li><a routerLink="forms/checkboxes-radios" routerLinkActive="active">Checkboxes Radios</a></li>
+        <li><a routerLink="forms/validation" routerLinkActive="active">Validation</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#datatables" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">subtitles</i>Datatables </a>
+      <ul id="datatables" class="collapse list-unstyled">
+        <li><a routerLink="datatables/full" routerLinkActive="active">Full table</a></li>
+        <li><a routerLink="datatables/inline-editing" routerLinkActive="active">Inline Editing</a></li>
+        <li><a routerLink="datatables/filtering" routerLinkActive="active">Filtering</a></li>
+        <li><a routerLink="datatables/paging" routerLinkActive="active">Paging</a></li>
+        <li><a routerLink="datatables/sorting" routerLinkActive="active">Sorting</a></li>
+      </ul>
+    </li>
+
+
+    <li><a href="#navpages" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">photo_album</i>Pages </a>
+      <ul id="navpages" class="collapse list-unstyled">
+        <li><a routerLink="pages/invoice" routerLinkActive="active">Invoice</a></li>
+        <li><a routerLink="pages/forum" routerLinkActive="active">Forum</a></li>
+        <li><a routerLink="pages/pricing" routerLinkActive="active">Pricing</a></li>
+        <li><a routerLink="pages/blank" routerLinkActive="active">Blank</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#charts" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">insert_chart</i>Charts </a>
+      <ul id="charts" class="collapse list-unstyled">
+        <li><a routerLink="charts/bar-charts" routerLinkActive="active">Bar Charts</a></li>
+        <li><a routerLink="charts/pie-charts" routerLinkActive="active">Pie Charts</a></li>
+        <li><a routerLink="charts/line-area-charts" routerLinkActive="active">Line/Area Charts</a></li>
+        <li><a routerLink="charts/other-charts" routerLinkActive="active">Other Charts</a></li>
+      </ul>
+    </li>
+    <li><a href="#maps" aria-expanded="false" data-toggle="collapse"> <i class="material-icons">insert_chart</i>Maps </a>
+      <ul id="maps" class="collapse list-unstyled">
+        <li routerLinkActive="active"><a routerLink="maps/google" >Fullscreen</a></li>
+        <li routerLinkActive="active"><a routerLink="maps/google-maps" >Google</a></li>
+      </ul>
+    </li>
+    <li routerLinkActive="active"> <a routerLink="cards"> <i class="material-icons">content_paste</i>Cards </a></li>
+    <li routerLinkActive="active"> <a routerLink="email"><i class="material-icons">email</i>Email </a></li>
+    <li routerLinkActive="active"> <a routerLink="taskboard"> <i class="material-icons">dashboard</i>Taskboard</a></li>
+  </ul>
+
+  <span class="heading">Extras</span>
+  <ul class="list-unstyled">
+    <li> <a routerLink="login" routerLinkActive="active"> <i class="material-icons">lock</i> Login </a></li>
+    <li> <a routerLink="register" routerLinkActive="active"> <i class="material-icons">account_balance_wallet</i> Register </a></li>
+  </ul>
+</nav>

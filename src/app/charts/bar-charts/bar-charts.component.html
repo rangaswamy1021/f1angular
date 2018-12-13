@@ -1,0 +1,214 @@
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Bar Charts</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Bar Charts</li>
+  </div>
+</ul>
+
+<section class="f1-bar-charts">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Vertical bar chart</div>
+          <div class="card-blockcharts">
+            <div>
+              <ngx-charts-bar-vertical 
+              [view]="view"
+               [scheme]="colorScheme" 
+              [results]="single" 
+              [gradient]="gradient" 
+              [xAxis]="showXAxis"
+                [yAxis]="showYAxis" 
+                [legend]="showLegend" 
+                [showXAxisLabel]="showXAxisLabel" 
+                [showYAxisLabel]="showYAxisLabel"
+                [xAxisLabel]="xAxisLabel" [yAxisLabel]="yAxisLabel" 
+                (select)="onSelect($event)">
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Horizontal bar chart</div>
+          <div class="card-blockcharts">
+            <div>
+          <ngx-charts-bar-horizontal
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="single"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-horizontal>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+     <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Grouped vertical bar chart</div>
+          <div class="card-blockcharts">
+            <div>
+           <ngx-charts-bar-vertical-2d
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical-2d>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Grouped horizontal bar chart</div>
+          <div class="card-blockcharts">
+            <div>
+                  <ngx-charts-bar-horizontal-2d
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-horizontal-2d>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Stacked vertical bar chart</div>
+          <div class="card-blockcharts">
+            <div>
+                <ngx-charts-bar-vertical-stacked
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical-stacked>
+      
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Stacked horizontal bar chart</div>
+          <div class="card-block">
+            <div>
+                      <ngx-charts-bar-horizontal-stacked
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-horizontal-stacked>
+        
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+     <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Normalized vertical bar chart</div>
+          <div class="card-block">
+            <div>
+             <ngx-charts-bar-vertical-normalized
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical-normalized>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div class="card">
+          <div class="card-header">Normalized horizontal bar chart</div>
+          <div class="card-block">
+            <div>
+              <ngx-charts-bar-horizontal-normalized
+      [view]="view"
+      [scheme]="colorScheme"
+      [results]="multi"
+      [gradient]="gradient"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-horizontal-normalized>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</section>

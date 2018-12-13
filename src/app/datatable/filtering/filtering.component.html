@@ -1,0 +1,24 @@
+<header class="page-header">
+  <div class="container-fluid">
+    <h2 class="no-margin-bottom">Filtering</h2>
+  </div>
+</header>
+
+<ul class="breadcrumb">
+  <div class="container-fluid">
+    <li class="breadcrumb-item"><a href="">Home</a></li>
+    <li class="breadcrumb-item active">Filtering</li>
+  </div>
+</ul>
+
+<section class="f1-filtering">
+  <div class="container-fluid">
+
+    <input type='text' style='padding:8px;margin:15px auto;'
+     placeholder='Type to filter the name column...' class="form-control" (keyup)='updateFilter($event)'
+    />
+    <ngx-datatable #table class='material' [columns]="columns" [columnMode]="'force'" [headerHeight]="50" [footerHeight]="50"
+      [rowHeight]="'auto'" [limit]="10" [rows]='rows'>
+    </ngx-datatable>
+  </div>
+</section>
